@@ -1,8 +1,27 @@
 body {
     background-color: rgb(174, 134, 84);
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: flex;
 }
 
 .card {
     background-color: rgb(245, 227, 204);
-    display: flex;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 15px 2px black;
+    transition: 0.2s;
+}
+
+.card:not(:first-child) {
+    margin-left: -4rem;
+}
+
+.card:hover {
+    transform: translateY((-1rem));
 }
