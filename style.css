@@ -1,0 +1,106 @@
+.container {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+/* .................. */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin-bottom: 30px;
+}
+
+.one {
+    background-color: rgb(127, 255, 212);
+    height: 100px;
+}
+
+.two {
+    background-color: rgb(74, 74, 230);
+    height: 100px;
+}
+
+.three {
+    background-color: brown;
+    height: 100px;
+}
+
+.four {
+    background-color: rgb(121, 76, 10);
+    height: 100px;
+}
+
+.five {
+    background-color: pink;
+    height: 100px;
+}
+
+.six {
+    background-color: rgb(100, 146, 30);
+    height: 100px;
+}
+/* ................... */
+.new-container {
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat(3, 50px);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.top-left {
+    background-color: rgb(119, 57, 57);
+    grid-column: 1;
+}
+
+.top-right {
+    background-color: rgb(119, 57, 57);
+    grid-column: 2;
+}
+
+.center {
+    background-color: rgb(119, 57, 57);
+    grid-column: span 2;
+}
+
+.bottom-left {
+    background-color: rgb(119, 57, 57);
+    grid-column: 1;
+}
+
+.bottom-right {
+    background-color: rgb(119, 57, 57);
+    grid-column: 2;
+}
+/* ..................... */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 400px;
+        height: 400px;
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .new-container {
+        grid-template-rows: repeat(5, 50px);
+    }
+    .top-left,
+    .top-right,
+    .center,
+    .bottom-left,
+    .bottom-right {
+        grid-column: 1;
+    }
+}
+
